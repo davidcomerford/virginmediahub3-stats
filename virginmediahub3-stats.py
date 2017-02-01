@@ -3,21 +3,6 @@ import collections
 from requests import Request, Session
 import xml.etree.ElementTree as ET
 
-"""
-# Database: virginmedia
-#
-# Measurement: downstream
-#  Tags: chid
-#  Values: power, snr
-#
-# Measurement: upstream
-#  Tag: chid
-#  Values: power
-
-$ influxdb localhost
-> create database virginmediahub
-
-"""
 
 # Source of data
 url = "http://192.168.0.1/common_page/login.html"
