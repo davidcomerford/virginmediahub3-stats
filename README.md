@@ -8,7 +8,10 @@ Alternatively the script can be run with `-c` parameter to get dump to current s
 
 ## Requirements
 * VirginMedia Hub 3.0 router
-* InfluxDB database
+* Python >= 2.7
+* Requests Pyhton library (pip install requests)
+* InfluxDB database (optional)
+* Grapana (optional)
 
 
 ## InfluxDB 
@@ -24,4 +27,3 @@ Alternatively the script can be run with `-c` parameter to get dump to current s
 $ influxdb localhost
 > create database virginmediahub
 ```
-
