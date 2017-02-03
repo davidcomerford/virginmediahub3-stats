@@ -1,3 +1,5 @@
+#/usr/bin/python
+
 import requests
 import collections
 from requests import Request, Session
