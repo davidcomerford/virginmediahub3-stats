@@ -24,6 +24,9 @@ Alternatively the script can be run with `-c` parameter to get dump to current s
 | status        | state         |            |
 
 ### Create database
+Note: I've created a retention policy of 365 days here.
+
+Probably the smart thing to do here is lower that value and create a CQ for longer term downsampled storage. 
 ```
 $ influxdb localhost
 > CREATE DATABASE virginmediahub
