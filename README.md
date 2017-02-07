@@ -6,6 +6,9 @@ By default the data is sent to your InfluxDB database for consumption by Grapaha
 
 Alternatively the script can be run with `-c` parameter to get dump to current statistics to standard out for those 'crap whats up with the internet(!?) moments'
 
+## Screenshot of data in Graphana
+![virginmediahub-graphana](https://cloud.githubusercontent.com/assets/20387602/22714796/05e19cca-ed86-11e6-9827-f831f19fc727.png)
+
 ## Requirements
 * VirginMedia Hub 3.0 router
 * Python >= 2.7
@@ -48,7 +51,7 @@ SELECT last("state") FROM "status" WHERE $timeFilter GROUP BY time($interval)
 
 #### Downstream power 
 ```
-SELECT mean("power") FROM "autogen"."downstream" WHERE $timeFilter GROUP BY time($interval), "channel" fill(previous)
+SELECT last("power") FROM "autogen"."downstream" WHERE $timeFilter GROUP BY time($interval), "channel" fill(previous)
 ```
 #### Downstream signal to noise ratio
 ```
